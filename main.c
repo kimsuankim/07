@@ -3,18 +3,21 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int inc(int counter);
+void f(void);
+int i; //i=0
 int main(int argc, char *argv[]) {
 	
-	int i=10;
-	printf("함수호출전i= %d\n", i);
-	i= inc(i); //변수=함수결과(함수에 의해 리턴된값) 
-	printf("함수호출후 i= %d\n", i);
-	
+	for(i=0; i<5; i++) //i=0 에서 시작 
+	{
+		f();// #*10, i는 10이됨
+	}
+
 	return 0;
 }
-int inc(int counter)
-{
-	counter++;
-	return counter;
-}
+
+void f(void)
+ {
+ 	for(i=0; i<10; i++) //열번반복, i=10저장 
+ 	 printf("#");
+ }
+
