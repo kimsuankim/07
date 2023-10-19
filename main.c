@@ -3,21 +3,22 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void f(void);
-int i; //i=0
+void sub(void);
 int main(int argc, char *argv[]) {
-	
-	for(i=0; i<5; i++) //i=0 에서 시작 
-	{
-		f();// #*10, i는 10이됨
-	}
-
+	int i; 
+	for(i=0; i<3; i++)
+	 sub();
 	return 0;
 }
 
-void f(void)
+void sub(void)
  {
- 	for(i=0; i<10; i++) //열번반복, i=10저장 
- 	 printf("#");
+ 	int auto_count= 0; //stack에 0저장 
+	static int static_count= 0;
+	auto_count++; //stack 에 저장 
+	static_count++; //data 에 저장 
+	printf("auto_count=%d\n", auto_count); 
+	printf("static_count=%d\n", static_count); 
+	//stack 끝 
  }
 
